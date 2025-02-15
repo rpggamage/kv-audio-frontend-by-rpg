@@ -12,4 +12,9 @@ Day-10 (Frontend 02 Day)
  npm install tailwindcss @tailwindcss/vite
  etc
 
- 
+sticky - you scroll, but I stay in given position
+fixed   - I do not care any one I stay in the given position in the screen
+
+absolute - Give me position I will stay in given position of my near "relative" parent
+relative - I will handle the my absolute child
+
