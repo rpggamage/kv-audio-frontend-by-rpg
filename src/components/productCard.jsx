@@ -2,10 +2,16 @@ import React from 'react';
 import './ProductCard.css'; // Import the CSS file
 
 export default function ProductCard(props) {
+
+    console.log(props);
+
+
     return (
+        
+
         <div className="product-card">
             <img 
-                src="https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Aluminum_Can_1.jpg" 
+                src={props.image}
                 alt={props.name} 
             />
             <h3>{props.name}</h3> {/* Use props for dynamic name */}
