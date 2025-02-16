@@ -18,6 +18,8 @@ Day-10 (Frontend 02 Day)
     absolute - Give me position I will stay in given position of my near "relative" parent
     relative - I will handle the my absolute child
 
+    w-[calc(100vw-450px)]  this is the function to calculate in TWind
+
 ## alignment
     flex 
     flex-col
@@ -33,4 +35,29 @@ Day-10 (Frontend 02 Day)
         npm install react-icons
 
         helping suggestions for icon ,vs code extension "React Icons" by "Afzal"
+## React Route
+    npm i react-router-dom
+    <BrowserRouter></BrowserRouter>
+    NOW CREAT A SITE MAP
+       Example :
+                    <BrowserRouter>
+                        <Routes path="/*" >
+                        
+                            <Route path="/admin" element={<AdminPage />} />
+                            <Route path="/" element={<h1>Home</h1>} />
+                            <Route path="/*" element={<NotFound />} />
+
+                        </Routes>
+                    </BrowserRouter>
+#  ctrl+shift+i is to see error from browser
+#  Then in page like admin page --> sub routing is there same as in home page
+
+# you can use <a href= > tag for navigation but correct way is <Link to = >
+# create "pages" folder 
+
+
+install power toys from windows app stores 
+# win+shift+t  for extracting text
+# win+shift+c  for extracting color
+
 
