@@ -1,13 +1,10 @@
 import React from 'react';
 import { Header } from '../../components/header';
-
 import Contact from './contact';
 import Items from './items';
 import Gallery from './gallery';
 import Home from './home';
-
 import { Route, Routes } from 'react-router-dom';
-import NotFound from '../notFound/notFound';
 import ErrorNotFound from './errorNotFound';
 
 export function HomePage() {

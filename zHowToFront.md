@@ -1,9 +1,9 @@
-Day-09 (Frontend 01 Day)
+Day-09 (Frontend 01 Day) 😍
 npm create vite@latest
     npm install
     npm run dev
 
-Day-10 (Frontend 02 Day)
+Day-10 (Frontend 02 Day) 😍
  apply more class is the tailwind theory <div className='test bod texcol'>
  https://tailwindcss.com/docs/installation/using-vite 
 
@@ -11,7 +11,7 @@ Day-10 (Frontend 02 Day)
 
  npm install tailwindcss @tailwindcss/vite
  etc
-##vposition
+## position
     sticky - you scroll, but I stay in given position
     fixed   - I do not care any one I stay in the given position in the screen
 
@@ -40,15 +40,15 @@ Day-10 (Frontend 02 Day)
     <BrowserRouter></BrowserRouter>
     NOW CREAT A SITE MAP
        Example :
-                    <BrowserRouter>
-                        <Routes path="/*" >
-                        
-                            <Route path="/admin" element={<AdminPage />} />
-                            <Route path="/" element={<h1>Home</h1>} />
-                            <Route path="/*" element={<NotFound />} />
+                <BrowserRouter>
+                    <Routes path="/*" >
+                    
+                    <Route path="/admin/*" element={<AdminPage />} />
+                    <Route path="/*" element={<HomePage />} />
+                    {/* <Route path="/*" element={<NotFound />} /> */}
 
-                        </Routes>
-                    </BrowserRouter>
+                    </Routes>
+                </BrowserRouter>
 #  ctrl+shift+i is to see error from browser
 #  Then in page like admin page --> sub routing is there same as in home page
 
@@ -56,8 +56,12 @@ Day-10 (Frontend 02 Day)
 # create "pages" folder 
 
 
-install power toys from windows app stores 
+install "power toys" from windows app stores 
 # win+shift+t  for extracting text
 # win+shift+c  for extracting color
 
+# in LOGO sir make view by  object-cover 👍💕            
+    <img src="/logo.png" alt="logo" className="w-[100px] h-[100px] border-4 object-cover absolute left-1" /> 
 
+
+Day-11 (Frontend 03 Day) 😍
