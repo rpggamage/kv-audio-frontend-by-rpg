@@ -64,4 +64,23 @@ install "power toys" from windows app stores
     <img src="/logo.png" alt="logo" className="w-[100px] h-[100px] border-4 object-cover absolute left-1" /> 
 
 
-Day-11 (Frontend 03 Day) 😍
+Day-12 (Frontend 04 Day) 😍
+
+# HOOK
+/////////////////////////useState Example/////////////////////////////
+                import React, { useState } from "react";
+                export default function Testing(){
+                    //let count = 0;
+                    const [count,setCount]=useState(0);
+                    return(
+                        <div className="w-full h-screen">
+                            <h1>{count}</h1>
+                            <button onClick={() => {                
+                                setCount(count+1);
+                                }
+                                }>Increment</button>            
+                        </div>
+                    )
+                }
+////////////////////////////////////////////////////////////////////
+
