@@ -84,3 +84,18 @@ Day-12 (Frontend 04 Day) 😍
                 }
 ////////////////////////////////////////////////////////////////////
 
+# fruit counter created in another branch
+
+# login page back ground and again use of CSS by  sir is important (Watch day 12 - from 60 min )
+
+
+
+## Day 16
+
+## UI/UX Rules 
+
+# 60-30-10 Rules
+# 3 colors only 
+        primary  = 60%  - Daraz LA ALU - ashe - light color god for eyes
+        secondary = 30%  -
+        Accent    = 10%  - Daraz orange color - what is the color of daraz         
