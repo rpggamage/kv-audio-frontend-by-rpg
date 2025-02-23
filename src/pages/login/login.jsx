@@ -22,6 +22,10 @@ export default function LoginPage() {
             console.log(res)
             toast.success('Login successful')
             const user = res.data.user
+
+// localStorage.setItem('user', JSON.stringify(user))
+            localStorage.setItem('user', res.data.token)
+
             if(user.role === 'admin'){
                 navigate('/admin/');
 
@@ -46,9 +50,10 @@ return (
 
             <img src="/logo.png" alt="logo" className="w-[100px] h-[100px] object-cover" />
             
-            <input type="email" placeholder="Email" className="w-[300px] h-[50px] rounded-lg mb-2" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="email" placeholder="Email" className="mt-6 w-[300px] h-[30px] bg-transparent border-b-2 border-white text-white text-xl outline-none" value={email} onChange={(e) => setEmail(e.target.value)} />
 
-            <input type="password" placeholder="Password" className="w-[300px] h-[50px] rounded-lg mb-2 mt-6" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" placeholder="Password" className="w-[300px] h-[30px]
+        mt-6 bg-transparent border-b-2 border-white text-white text-xl outline-none" value={password} onChange={(e) => setPassword(e.target.value)} />
 
 
             <button className="my-8 w-[300px] h-[50px] rounded-lg bg-yellow-500 hover:bg-yellow-600 text-white font-bold">Login</button>
