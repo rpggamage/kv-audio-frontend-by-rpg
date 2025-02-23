@@ -88,6 +88,29 @@ Day-12 (Frontend 04 Day) 😍
 
 # login page back ground and again use of CSS by  sir is important (Watch day 12 - from 60 min )
 
+# use forms and onSubmit function with prevent default 
+
+# for API call from front end
+    # npm install axios
+
+# you cannot use "async" for component functions
+
+# axios will give CORS error so you need to install CORS to backend 
+
+# now we need https://react-hot-toast.com/ for alert message
+    #npm install react-hot-toast
+
+    #In app.jsx
+        function App() {
+        return (
+            <BrowserRouter>
+            <Toaster/>
+
+    
+
+
+
+
 
 
 ## Day 16
