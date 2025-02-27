@@ -128,7 +128,7 @@ export default function Testing() {
 
 - ## I used LastPass for make login easy to localhost admin and user
 
-# Day-13 (Frontend 02 Day) 😍
+# Day-13 (Frontend 0x Day) 😍
 
 - ## Local storage in Browser is important
 - Key value pair
@@ -140,6 +140,9 @@ export default function Testing() {
 ```
 
 ## [How to enable auto format on save with prettier in VS Code editor - Mac & Windows](https://www.youtube.com/watch?v=zd_aDbwr4pY)
+
+- ## Then add item page completed use axios and and useNavigate hook to go back to add item page
+-
 
 # Day 16 (Frontend 02 Day) 😍
 
