@@ -141,8 +141,19 @@ export default function Testing() {
 
 ## [How to enable auto format on save with prettier in VS Code editor - Mac & Windows](https://www.youtube.com/watch?v=zd_aDbwr4pY)
 
+- map()
 - ## Then add item page completed use axios and and useNavigate hook to go back to add item page
+- {sampleArr.map((item) => ( and, use return => print to page and need unique key (@2:06 min)
+- map need unique key
+
+# useEffect is only run at load - if you use useSate it will be a while(1) loop;
+
+- https://www.youtube.com/watch?v=-4XpG5_Lj_o
+- https://www.youtube.com/shorts/l0WkXnIODk0
+- https://www.youtube.com/shorts/kKR6oQxImnE
 -
+
+- So for table we need 2 number of useState(for data and to check data loaded) and 1 useEffect (Not a rule but)
 
 # Day 16 (Frontend 02 Day) 😍
 

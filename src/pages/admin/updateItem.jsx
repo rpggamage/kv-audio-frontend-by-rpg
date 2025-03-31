@@ -3,7 +3,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-export default function AddItemPage() {
+export default function UpdateItem() {
   const [productKey, setProductKey] = useState("");
   const [productName, setProductName] = useState("");
   const [productPrice, setProductPrice] = useState("");
@@ -54,7 +54,7 @@ export default function AddItemPage() {
   }
   return (
     <div className="w-full h-full flex flex-col items-center gap-2">
-      <h1>Add Items</h1>
+      <h1>Edit Items</h1>
 
       <div className="w-[400px] border flex flex-col items-center gap-2 p-4">
         <input
