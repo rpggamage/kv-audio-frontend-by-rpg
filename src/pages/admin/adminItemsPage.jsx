@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import sampleArr from "../../components/sampleItemsArray";
 import { CiCirclePlus } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function AdminItemsPage() {
   const [items, setItems] = useState(sampleArr);
   const [itemLoaded, setItemLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!itemLoaded) {
@@ -90,12 +91,14 @@ export default function AdminItemsPage() {
                     </span>
                   </td>
                   <td className="px-4 py-2 flex gap-2">
-                    <Link
-                      to={`/admin/items/edit/${item.key}`}
+                    <button
+                      onClick={() => {
+                        navigate(`/admin/items/edit`, { state: item });
+                      }}
                       className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-700 transition-all"
                     >
                       Edit
-                    </Link>
+                    </button>
                     <button
                       onClick={() => handleDelete(item.key)}
                       className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-700 transition-all"

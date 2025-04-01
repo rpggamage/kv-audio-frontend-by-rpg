@@ -154,6 +154,31 @@ export default function Testing() {
 -
 
 - So for table we need 2 number of useState(for data and to check data loaded) and 1 useEffect (Not a rule but)
+- useLocation Hook to navigate with data
+- ```
+                   <button
+                     onClick={() => {
+                       navigate(`/admin/items/edit`, { state: item });
+                     }}
+                     className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-700 transition-all"
+                   >
+                     Edit
+              </button>
+  ```
+
+```
+    Then from the page navigate
+```
+
+const location = useLocation();
+
+console.log(location);
+
+const [productKey, setProductKey] = useState(location.state.key);
+const [productName, setProductName] = useState(location.state.name);
+
+```
+
 
 # Day 16 (Frontend 02 Day) 😍
 
@@ -164,3 +189,4 @@ export default function Testing() {
 - primary = 60% - Daraz LA ALU - ashe - light color god for eyes
 - secondary = 30% -
 - Accent/Action = 10% - Daraz orange color - what is the color of daraz
+```
