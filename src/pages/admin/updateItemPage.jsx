@@ -22,7 +22,7 @@ export default function UpdateItemPage() {
   );
   const navigate = useNavigate();
 
-  async function handleAddItem() {
+  async function handleEditItem() {
     console.log(
       productKey,
       productName,
@@ -35,10 +35,10 @@ export default function UpdateItemPage() {
 
     if (token) {
       try {
-        const result = await axios.post(
-          "http://localhost:3000/api/products",
+        const result = await axios.put(
+          "http://localhost:3000/api/products/" + productKey,
           {
-            key: productKey,
+            // key: productKey,
             name: productName,
             price: productPrice,
             category: productCategory,
@@ -68,6 +68,7 @@ export default function UpdateItemPage() {
 
       <div className="w-[400px] border flex flex-col items-center gap-2 p-4">
         <input
+          disabled
           type="text"
           placeholder="Product Key"
           value={productKey}
@@ -103,7 +104,7 @@ export default function UpdateItemPage() {
           onChange={(e) => setProductDimension(e.target.value)}
           className="border p-1 w-full"
         />
-        <input
+        <textarea
           type="text"
           placeholder="Product Description"
           value={productDescription}
@@ -111,10 +112,10 @@ export default function UpdateItemPage() {
           className="border p-1 w-full"
         />
         <button
-          onClick={handleAddItem}
+          onClick={handleEditItem}
           className="bg-blue-500 text-white p-2 rounded w-full"
         >
-          Add
+          Edit
         </button>
         <button
           onClick={() => navigate("/admin/items")}

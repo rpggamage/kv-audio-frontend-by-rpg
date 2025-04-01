@@ -178,6 +178,10 @@ const [productKey, setProductKey] = useState(location.state.key);
 const [productName, setProductName] = useState(location.state.name);
 
 ```
+# Day 15 (Frontend  Day) 😍
+
+- Howto free host the backend
+-- Day 15 - from 06:00
 
 
 # Day 16 (Frontend 02 Day) 😍
