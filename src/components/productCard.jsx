@@ -1,7 +1,5 @@
-// export default function ProductCard(props) {
-//   const item = props.item;
-//   return <h1>{item.name}</h1>;
-// }
+import { Link } from "react-router-dom"; // if you're using React Router
+
 export default function ProductCard({ item }) {
   return (
     <div className="w-full max-w-sm bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
@@ -24,7 +22,7 @@ export default function ProductCard({ item }) {
           </span>
         </div>
 
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-4">
           <span className="text-lg font-semibold text-green-600">
             ${item.price}
           </span>
@@ -37,6 +35,16 @@ export default function ProductCard({ item }) {
           >
             {item.availability ? "Available" : "Out of Stock"}
           </span>
+        </div>
+
+        {/* View Details Button */}
+        <div className="text-center">
+          <Link
+            to={`/product/${item._id}`} // Change this route as per your routing structure
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-md transition-colors duration-300"
+          >
+            View Details
+          </Link>
         </div>
       </div>
     </div>
