@@ -13,7 +13,7 @@ export default function AdminItemsPage() {
     if (!itemLoaded) {
       const token = localStorage.getItem("user");
       axios
-        .get("http://localhost:3000/api/products", {
+        .get(`${import.meta.env.VITE_BACKEND_URL}/api/products`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
@@ -31,7 +31,7 @@ export default function AdminItemsPage() {
     const token = localStorage.getItem("user");
 
     axios
-      .delete(`http://localhost:3000/api/products/${key}`, {
+      .delete(`${import.meta.env.VITE_BACKEND_URL}/api/products/${key}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {

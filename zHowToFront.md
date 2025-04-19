@@ -1,3 +1,5 @@
+## ctrl+shift+v for preview .md file
+
 # Day-09 (Frontend 01 Day) 😍
 
 - npm create vite@latest
@@ -153,7 +155,7 @@ export default function Testing() {
 - https://www.youtube.com/shorts/kKR6oQxImnE
 -
 
-- So for table we need 2 number of useState(for data and to check data loaded) and 1 useEffect (Not a rule but)
+- So for table we need 2 number of hooks ,useState(for data and to check data loaded) and 1 useEffect (Not a rule but)
 - useLocation Hook to navigate with data
 - ```
                    <button
@@ -166,23 +168,39 @@ export default function Testing() {
               </button>
   ```
 
-```
-    Then from the page navigate
-```
-
-const location = useLocation();
-
-console.log(location);
-
-const [productKey, setProductKey] = useState(location.state.key);
-const [productName, setProductName] = useState(location.state.name);
+- Then from the page navigate
 
 ```
-# Day 15 (Frontend  Day) 😍
+      const location = useLocation();
+
+      console.log(location);
+
+      const [productKey, setProductKey] = useState(location.state.key);
+      const [productName, setProductName] = useState(location.state.name);
+```
+
+# Day 15 (Frontend Day) 😍
 
 - Howto free host the backend
--- Day 15 - from 06:00
+  -- Day 15 - from 06:00
+- Then
 
+```
+
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+axios
+.post(`${backendUrl}/api/users/login`, {
+email: email,
+password: password,
+})....
+
+```
+
+- because in .env file we have VITE_BACKEND_URL=http://localhost:3000
+- use backtick for String addition `` is better
+- **This is the correct method to avoid error from error is null**
+  ` errotoast.error(err?.response?.data?.message || "Registration failed");`
+-
 
 # Day 16 (Frontend 02 Day) 😍
 
@@ -193,4 +211,7 @@ const [productName, setProductName] = useState(location.state.name);
 - primary = 60% - Daraz LA ALU - ashe - light color god for eyes
 - secondary = 30% -
 - Accent/Action = 10% - Daraz orange color - what is the color of daraz
+
+```
+
 ```
