@@ -233,3 +233,5 @@ password: password,
 ```
 
 - Add above code to vercel.json by creating the file in frontend root
+- VSCode ->GitHub->Vercel (When you push to github automatically redeploy to Vercel).
+- Above is called **CICD** pipe line 👍👌❤️❤️❤️⭐
