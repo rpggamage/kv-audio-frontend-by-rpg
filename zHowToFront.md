@@ -212,6 +212,10 @@ password: password,
 - secondary = 30% -
 - Accent/Action = 10% - Daraz orange color - what is the color of daraz
 
+- kvaudio2025 is the pw for supb
+- https://supabase.com/
+- npm i @supabase/supabase-js
+
 ```
 
 ```

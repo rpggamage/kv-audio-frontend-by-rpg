@@ -11,7 +11,7 @@ export function HomePage() {
   return (
     <>
       <Header />
-      <div className="h-[calc(100vh-100px)] w-full bg-primary">
+      <div className="h-[calc(100vh-100px)] w-full bg-secondary">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/items" element={<Items />} />

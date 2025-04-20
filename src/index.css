@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: ##f4f4f4; /* Light Gray – Neutral Background */
+  --color-secondary: #afddff; /* Deep Black – Modern & Bold */
+  --color-action: #191414; /* Deep Black – Modern & Bold */
+  --color-background: #f4f4f4; /* Light Gray – Neutral Background */
+  --color-surface: #ffffff; /* White – Clean Content Containers */
+  --color-text-primary: #0f0f0f; /* Near Black – Strong Titles */
+  --color-text-secondary: #6b7280; /* Gray-500 – Descriptive Text */
+  --color-success: #22c55e; /* Bright Green – Available */
+  --color-warning: #facc15; /* Yellow – Low Stock Warning */
+  --color-error: #ef4444; /* Red – Unavailable/Error */
+  --color-border: #e5e7eb; /* Light Border – Minimal UI Lines */
+  --color-accent: #ff4c29; /* Red-Orange – CTA Buttons, Highlights */
+}
