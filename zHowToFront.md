@@ -219,3 +219,17 @@ password: password,
 ```
 
 ```
+
+# Day 17 (Frontend 0 Day) 😍
+
+- Here from start => frontend host to [vercel](https://vercel.com/)
+
+```
+{
+   "rewrites":  [
+     {"source": "/(.*)", "destination": "/"}
+   ]
+ }
+```
+
+- Add above code to vercel.json by creating the file in frontend root
