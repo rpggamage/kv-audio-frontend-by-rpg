@@ -236,3 +236,6 @@ password: password,
 - VSCode ->GitHub->Vercel (When you push to github automatically redeploy to Vercel).
 - Above is called **CICD** pipe line 👍👌❤️❤️❤️⭐
 - test
+- continuation from Day16 URLs of uploaded images to supabase send to backend images array which is [String] , Now item page shows images in product card
+
+# Day 18 (Frontend 0 Day) 😍

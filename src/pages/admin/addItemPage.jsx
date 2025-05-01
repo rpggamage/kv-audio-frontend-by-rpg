@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import mediaUpload from "../../utils/mediaUpload";
 
 export default function AddItemPage() {
   const [productKey, setProductKey] = useState("");
@@ -10,9 +11,28 @@ export default function AddItemPage() {
   const [productCategory, setProductCategory] = useState("audio");
   const [productDimension, setProductDimension] = useState("");
   const [productDescription, setProductDescription] = useState("");
+  const [productImage, setProductImage] = useState([]);
+
   const navigate = useNavigate();
 
   async function handleAddItem() {
+    //console.log(productImage);
+    const promises = [];
+    for (let i = 0; i < productImage.length; i++) {
+      console.log(productImage[i]);
+      const promise = mediaUpload(productImage[i]);
+      promises.push(promise);
+      if (i == 5) {
+        toast.error("You can only upload 5 images per product");
+        break;
+      }
+    }
+    // Promise.all(promises)
+    //   .then((values) => {
+    //     console.log(values);
+    //   })
+    //   .catch((err) => toast.error(err));
+
     console.log(
       productKey,
       productName,
@@ -25,6 +45,13 @@ export default function AddItemPage() {
 
     if (token) {
       try {
+        // Promise.all(promises)
+        //   .then((values) => {
+        //     console.log(values);
+        //   })
+        //   .catch((err) => toast.error(err));
+        const imageUrls = await Promise.all(promises);
+
         const result = await axios.post(
           `${import.meta.env.VITE_BACKEND_URL}/api/products`,
           {
@@ -34,6 +61,7 @@ export default function AddItemPage() {
             category: productCategory,
             dimension: productDimension,
             description: productDescription,
+            Image: imageUrls,
           },
           {
             headers: {
@@ -100,6 +128,13 @@ export default function AddItemPage() {
           onChange={(e) => setProductDescription(e.target.value)}
           className="border p-1 w-full"
         />
+        <input
+          type="file"
+          multiple
+          onChange={(e) => setProductImage(e.target.files)}
+          className="border p-1 w-full"
+        />
+
         <button
           onClick={handleAddItem}
           className="bg-blue-500 text-white p-2 rounded w-full"
